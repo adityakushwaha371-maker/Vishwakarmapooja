@@ -1,331 +1,47 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>श्री विश्वकर्मा पूजन 2026 | Reliance SME & ANFO</title>
-    <style>
-        :root {
-            --primary: #c94a29;
-            --primary-dark: #a3361a;
-            --reliance-blue: #0b3c68;
-            --bg: #f8f9fa;
-            --card-bg: #ffffff;
-            --text-main: #222222;
-            --text-muted: #666666;
-            --border: #e9ecef;
-        }
+/* Updated Team Card with Photo */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Devanagari", sans-serif;
-        }
+.team-card {
+    background: #fafafa;
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 20px 12px;
-        }
+.member-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+    flex-shrink: 0;
+}
 
-        .container {
-            max-width: 650px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-            border: 1px solid var(--border);
-        }
+.member-info {
+    flex-grow: 1;
+}
 
-        /* --- Header Section --- */
-        .header {
-            text-align: center;
-            padding: 35px 20px 25px;
-            background: linear-gradient(180deg, #fff6f0 0%, #ffffff 100%);
-            border-bottom: 1px solid var(--border);
-        }
+.member-info .name {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
 
-        .brand-badge {
-            display: inline-block;
-            background: var(--reliance-blue);
-            color: #ffffff;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            padding: 6px 16px;
-            border-radius: 50px;
-            margin-bottom: 18px;
-        }
-
-        .avatar-wrap {
-            position: relative;
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 15px;
-        }
-
-        .avatar-wrap img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--primary);
-            box-shadow: 0 6px 16px rgba(201, 74, 41, 0.25);
-        }
-
-        .title {
-            color: var(--primary);
-            font-size: 1.7rem;
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
-
-        .time-box {
-            display: inline-flex;
-            flex-direction: column;
-            gap: 4px;
-            background: #ffffff;
-            border: 1px solid #f2cfc2;
-            padding: 10px 20px;
-            border-radius: 12px;
-            margin-top: 10px;
-            font-size: 0.95rem;
-        }
-
-        /* --- Sections --- */
-        .content {
-            padding: 25px 20px;
-        }
-
-        .section {
-            margin-bottom: 28px;
-        }
-
-        .section-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--reliance-blue);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .section-title::before {
-            content: "";
-            width: 4px;
-            height: 18px;
-            background: var(--primary);
-            border-radius: 2px;
-        }
-
-        /* Team Grid */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 10px;
-        }
-
-        .team-card {
-            background: #fafafa;
-            border: 1px solid var(--border);
-            padding: 12px 16px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .team-card .name {
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .team-card .role {
-            font-size: 0.8rem;
-            color: var(--primary);
-            background: #fdf0eb;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        /* Planning Folder / Card */
-        .planning-folder {
-            background: #fdfdfd;
-            border: 1px dashed #d0d7de;
-            border-radius: 12px;
-            padding: 18px;
-        }
-
-        .plan-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 10px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .plan-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .plan-icon {
-            font-size: 1.2rem;
-            line-height: 1;
-            margin-top: 2px;
-        }
-
-        .plan-details strong {
-            display: block;
-            font-size: 0.95rem;
-            color: #333;
-        }
-
-        .plan-details span {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .sheet-btn {
-            display: block;
-            text-align: center;
-            background: var(--reliance-blue);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-top: 15px;
-            transition: opacity 0.2s;
-        }
-
-        .sheet-btn:hover {
-            opacity: 0.9;
-        }
-
-        /* --- Footer --- */
-        .footer {
-            background: #f8f9fa;
-            border-top: 1px solid var(--border);
-            padding: 25px 20px;
-            text-align: center;
-        }
-
-        .closing-msg {
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    
-    <!-- HEADER -->
-    <header class="header">
-        <!-- LOGO / BRAND TAG -->
-        <div class="brand-badge">RELIANCE SME & ANFO</div>
-
-        <!-- BHAGWAN VISHWAKARMA PHOTO -->
-        <div class="avatar-wrap">
-            <img src="vishwakarma.jpg" alt="भगवान विश्वकर्मा">
-        </div>
-
-        <h1 class="title">॥ श्री विश्वकर्मा पूजन 2026 ॥</h1>
-
-        <!-- DAY & TIMING -->
-        <div class="time-box">
-            <div>📅 <strong>दिन / तिथि:</strong> गुरुवार, 17 सितम्बर 2026</div>
-            <div>⏰ <strong>समय (Timing):</strong> सुबह 09:30 AM से</div>
-        </div>
-    </header>
-
-    <!-- CONTENT -->
-    <div class="content">
-
-        <!-- 1. ORGANIZING TEAM LIST -->
-        <div class="section">
-            <div class="section-title">आयोजन समिति (Organizing Team)</div>
-            <div class="team-grid">
-                <!-- Team Member 1 -->
-                <div class="team-card">
-                    <span class="name">नाम यहाँ लिखें 1</span>
-                    <span class="role">संयोजक</span>
-                </div>
-                <!-- Team Member 2 -->
-                <div class="team-card">
-                    <span class="name">नाम यहाँ लिखें 2</span>
-                    <span class="role">सह-संयोजक</span>
-                </div>
-                <!-- Team Member 3 -->
-                <div class="team-card">
-                    <span class="name">नाम यहाँ लिखें 3</span>
-                    <span class="role">प्रसाद प्रबंधन</span>
-                </div>
-                <!-- Team Member 4 -->
-                <div class="team-card">
-                    <span class="name">नाम यहाँ लिखें 4</span>
-                    <span class="role">व्यवस्थापक</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2. PLANNING & SCHEDULE SECTION -->
-        <div class="section">
-            <div class="section-title">प्लानिंग एवं रूपरेखा (Event Planning)</div>
-            <div class="planning-folder">
-                
-                <div class="plan-item">
-                    <div class="plan-icon">🪔</div>
-                    <div class="plan-details">
-                        <strong>पूजा एवं हवन</strong>
-                        <span>सुबह 09:30 AM — 11:30 AM</span>
-                    </div>
-                </div>
-
-                <div class="plan-item">
-                    <div class="plan-icon">🙏</div>
-                    <div class="plan-details">
-                        <strong>आरती एवं पुष्पांजलि</strong>
-                        <span>दोपहर 12:00 PM</span>
-                    </div>
-                </div>
-
-                <div class="plan-item">
-                    <div class="plan-icon">🍲</div>
-                    <div class="plan-details">
-                        <strong>विशाल भंडारा (महाप्रसाद वितरण)</strong>
-                        <span>दोपहर 01:00 PM से</span>
-                    </div>
-                </div>
-
-                <!-- Google Sheet Button (Planning / Expense / Chanda Sheet) -->
-                <a href="https://docs.google.com/spreadsheets" target="_blank" class="sheet-btn">
-                    📊 प्लानिंग एवं लाइव शीट देखें (Google Sheet)
-                </a>
-
-            </div>
-        </div>
-
-    </div>
-
-    <!-- CLOSING FOOTER -->
-    <footer class="footer">
-        <p class="closing-msg">
-            "आप सभी को SME & ANFO परिवार की तरफ से<br>
-            विश्वकर्मा पूजा की ढेर सारी शुभकामनाएँ!" 🙏
-        </p>
-    </footer>
-
-</div>
-
-</body>
-</html>
+.member-info .role {
+    font-size: 0.78rem;
+    color: var(--primary);
+    background: #fdf0eb;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 2px;
+}
