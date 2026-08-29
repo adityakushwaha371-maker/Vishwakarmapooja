@@ -47,16 +47,30 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .brand-badge {
-            display: inline-block;
-            background: var(--reliance-blue);
-            color: #ffffff;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            padding: 5px 14px;
+        .brand-header {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            padding: 6px 16px;
             border-radius: 50px;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .reliance-logo {
+            height: 26px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .brand-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--reliance-blue);
+            letter-spacing: 0.5px;
         }
 
         .avatar-wrap {
@@ -135,7 +149,6 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            transition: transform 0.1s ease;
         }
 
         .member-photo {
@@ -246,14 +259,20 @@
     
     <!-- HEADER -->
     <header class="header">
-        <div class="brand-badge">RELIANCE SME & ANFO</div>
+        <!-- RELIANCE LOGO + SME & ANFO BADGE -->
+        <div class="brand-header">
+            <img src="reliance-logo.png" alt="Reliance Logo" class="reliance-logo">
+            <span class="brand-title">SME & ANFO</span>
+        </div>
 
+        <!-- BHAGWAN VISHWAKARMA PHOTO -->
         <div class="avatar-wrap">
-            <img src="vish.jfif" alt="भगवान विश्वकर्मा">
+            <img src="vishwakarma.jpg" alt="भगवान विश्वकर्मा">
         </div>
 
         <h1 class="title">॥ श्री विश्वकर्मा पूजन 2026 ॥</h1>
 
+        <!-- DAY & TIMING -->
         <div class="time-box">
             <div>📅 <strong>दिन:</strong> गुरुवार (17 सितम्बर 2026)</div>
             <div>⏰ <strong>समय:</strong> सुबह 09:30 AM से</div>
@@ -263,18 +282,18 @@
     <!-- MAIN CONTENT -->
     <div class="content">
 
-        <!-- 1. ORGANIZING TEAM SECTION (38 MEMBERS) -->
+        <!-- 1. ORGANIZING TEAM SECTION (38 MEMBERS WITH PHOTO) -->
         <div class="section">
             <div class="section-title">आयोजन समिति (Organizing Team - 38 Members)</div>
             <div class="team-grid">
                 
                 <!-- Member 1 to 38 -->
-                <div class="team-card"><img src="member1.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">Mr.Jitendra Singh</span><span class="role">संयोजक</span></div></div>
-                <div class="team-card"><img src="member2.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">Mr.Suvam Nayak</span><span class="role">सह-संयोजक</span></div></div>
-                <div class="team-card"><img src="member3.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">Mr.Rohit Raikwar</span><span class="role">प्रबंधन</span></div></div>
-                <div class="team-card"><img src="member4.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">Mr.Pradumna </span><span class="role">व्यवस्थापक</span></div></div>
-                <div class="team-card"><img src="member5.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">Mr.Ravindra Singh Chauhan</span><span class="role">समिति सदस्य</span></div></div>
-                <div class="team-card"><img src="member6.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">Mr.Aditya Kushwaha</span><span class="role">समिति सदस्य</span></div></div>
+                <div class="team-card"><img src="member1.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">सदस्य नाम 1</span><span class="role">संयोजक</span></div></div>
+                <div class="team-card"><img src="member2.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">सदस्य नाम 2</span><span class="role">सह-संयोजक</span></div></div>
+                <div class="team-card"><img src="member3.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">सदस्य नाम 3</span><span class="role">प्रबंधन</span></div></div>
+                <div class="team-card"><img src="member4.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">सदस्य नाम 4</span><span class="role">व्यवस्थापक</span></div></div>
+                <div class="team-card"><img src="member5.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">सदस्य नाम 5</span><span class="role">समिति सदस्य</span></div></div>
+                <div class="team-card"><img src="member6.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">सदस्य नाम 6</span><span class="role">समिति सदस्य</span></div></div>
                 <div class="team-card"><img src="member7.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">सदस्य नाम 7</span><span class="role">समिति सदस्य</span></div></div>
                 <div class="team-card"><img src="member8.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">सदस्य नाम 8</span><span class="role">समिति सदस्य</span></div></div>
                 <div class="team-card"><img src="member9.jpg" alt="Member" class="member-photo"><div class="member-info"><span class="name">सदस्य नाम 9</span><span class="role">समिति सदस्य</span></div></div>
